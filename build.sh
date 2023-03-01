@@ -9,7 +9,7 @@ cp -r app/* build
 export CLASSPATH=.:$(ls complibs/*jar|tr '\n' ':')
 
 shopt -s globstar
-javac -d build/WEB-INF/classes src/**/**/*java && 
+javac -d build/WEB-INF/classes src/**/*java && 
   jar -cf target/$webapp.war -C build . && 
   echo "build success" &&
   exit 0
